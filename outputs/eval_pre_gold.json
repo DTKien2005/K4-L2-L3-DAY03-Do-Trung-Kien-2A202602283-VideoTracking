@@ -1,0 +1,97 @@
+{
+  "clip": "clip_01",
+  "frames": 190,
+  "iou_threshold": 0.5,
+  "pred_file": "evidence\\pre-gold\\clip_01\\gt.txt",
+  "gt_file": "gold\\clip_01\\gt.txt",
+  "pred_label": "PRED evidence\\pre-gold\\clip_01\\gt.txt",
+  "gt_label": "GT   gold\\clip_01\\gt.txt",
+  "metrics": {
+    "HOTA": 0.7565,
+    "DetA": 0.6867,
+    "AssA": 0.8346,
+    "LocA": 0.8813,
+    "IDF1": 0.8828,
+    "IDTP": 561,
+    "IDFP": 137,
+    "IDFN": 12,
+    "MOTA": 0.74,
+    "MOTP": 0.8702,
+    "IDSW": 0,
+    "FP": 137,
+    "FN": 12,
+    "GT_boxes": 573,
+    "PRED_boxes": 698
+  },
+  "gate": {
+    "checks": {
+      "IDF1": {
+        "value": 0.8827694728560189,
+        "required": 0.8,
+        "passed": true
+      },
+      "MOTA": {
+        "value": 0.7399650959860384,
+        "required": 0.75,
+        "passed": false
+      },
+      "MOTP": {
+        "value": 0.8701837169851471,
+        "required": 0.7,
+        "passed": true
+      }
+    },
+    "passed": false
+  },
+  "diagnostics": {
+    "missed_gt_tracks": [],
+    "fragmented_gt_tracks": [],
+    "partially_covered_gt_tracks": [],
+    "ghost_pred_tracks": [
+      {
+        "pred_track": 4,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          1,
+          80
+        ],
+        "length": 80
+      },
+      {
+        "pred_track": 5,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          3,
+          33
+        ],
+        "length": 31
+      },
+      {
+        "pred_track": 8,
+        "reason": "đã có bbox trước khi track tham chiếu 6 xuất hiện",
+        "frames": [
+          81,
+          100
+        ],
+        "length": 20
+      }
+    ],
+    "id_switches": [],
+    "loose_boxes": [
+      {
+        "frame": 81,
+        "gt_track": 5,
+        "pred_track": 7,
+        "iou": 0.546
+      },
+      {
+        "frame": 82,
+        "gt_track": 5,
+        "pred_track": 7,
+        "iou": 0.585
+      }
+    ],
+    "n_gt_tracks": 8,
+    "n_pred_tracks": 10
+  }
+}
